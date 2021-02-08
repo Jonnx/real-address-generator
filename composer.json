@@ -1,0 +1,22 @@
+{
+    "name": "jonnx/template-package-php",
+    "description": "a template for creating tested and self-versioning php packages",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonas Weigert",
+            "email": "weigert.jonas@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PackageName\\": "src/",
+            "PackageNameTests\\": "tests/"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

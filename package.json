@@ -1,0 +1,59 @@
+{
+  "name": "template-package-php",
+  "version": "1.0.0",
+  "description": "a template for creating tested and self-versioning php packages",
+  "license": "MIT",
+  "private": true,
+  "repository": "https://github.com/jonnx/template-package-php",
+  "scripts": {
+    "cm": "git cz",
+    "test": "vendor/bin/phpunit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@semantic-release/changelog": "3.0.2",
+    "@semantic-release/commit-analyzer": "6.1.0",
+    "@semantic-release/git": "7.0.7",
+    "@semantic-release/github": "5.2.8",
+    "@semantic-release/release-notes-generator": "7.1.4",
+    "commitizen": "^3.1.2",
+    "cz-ls-commits": "^1.0.4",
+    "husky": "^3.1.0",
+    "semantic-release": "15.13.2"
+  },
+  "release": {
+    "tagFormat": "${version}",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json",
+            "yarn.lock"
+          ]
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-ls-commits"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "./node_modules/cz-ls-commits/commitlint"
+    ]
+  }
+}
