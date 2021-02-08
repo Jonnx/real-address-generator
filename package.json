@@ -1,10 +1,10 @@
 {
-  "name": "template-package-php",
-  "version": "1.0.0",
+  "name": "real-address-generator",
+  "version": "0.0.0",
   "description": "a template for creating tested and self-versioning php packages",
   "license": "MIT",
   "private": true,
-  "repository": "https://github.com/jonnx/template-package-php",
+  "repository": "https://github.com/jonnx/real-address-generator",
   "scripts": {
     "cm": "git cz",
     "test": "vendor/bin/phpunit"
