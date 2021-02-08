@@ -1,28 +1,17 @@
-# template-package-php 
+# real-address-generator
 
-a template for creating tested and self-versioning php packages
-
-## Overview
-This templates provides the developer with the following set of functionality:
-
-- scaffolding for php package
-- testing patterns for php package
-- structured and linted commit messages
-- test-release CI/CD pipeline (via CircleCI)
-
----
+a package for generating real addresses using https://openaddresses.io/ data
 
 ## Getting Started
 
-To get started, setup your project from the template by following the official 
-documentation: [Creating a repository from a template](
-https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
+Download any desired file from https://batch.openaddresses.io/data and save it
+in the scope of your project.  
 
-After completing the initial steps, lets update your package manager files:
+You can then pick a random address from the data set using the following code:
 
-```
-composer.json
-package.json
+```php
+$generator = new Generator('path/to/your/data-set.geojson.gz');
+$address = $generator->address();
 ```
 
 ## Install Dependencies
