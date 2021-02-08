@@ -1,9 +1,9 @@
 <?php
 
-namespace RealAddressGenerator\Tests;
+namespace Jonnx\RealAddressGenerator\Tests;
 
 use PHPUnit\Framework\TestCase;
-use RealAddressGenerator\Generator;
+use Jonnx\RealAddressGenerator\Generator;
 
 class GeneratorTest extends TestCase
 {

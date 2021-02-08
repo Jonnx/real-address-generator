@@ -11,8 +11,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "RealAddressGenerator\\": "src/",
-            "RealAddressGenerator\\Tests\\": "tests/"
+            "Jonnx\\RealAddressGenerator\\": "src/",
+            "Jonnx\\RealAddressGenerator\\Tests\\": "tests/"
         }
     },
     "require": {

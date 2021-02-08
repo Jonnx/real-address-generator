@@ -1,6 +1,6 @@
 <?php
 
-namespace RealAddressGenerator;
+namespace Jonnx\RealAddressGenerator;
 
 use InvalidArgumentException;
 
